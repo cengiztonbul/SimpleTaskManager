@@ -30,25 +30,27 @@ namespace TaskManager
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			this.processList = new System.Windows.Forms.ListBox();
+			this.ProcessListBox = new System.Windows.Forms.ListBox();
 			this.processContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.test0ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.test1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.işlemciKullanımıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.göreviSonlandırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.processUsageLabel = new System.Windows.Forms.Label();
 			this.processContextMenu.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// processList
+			// ProcessListBox
 			// 
-			this.processList.ContextMenuStrip = this.processContextMenu;
-			this.processList.FormattingEnabled = true;
-			this.processList.Location = new System.Drawing.Point(12, 12);
-			this.processList.Name = "processList";
-			this.processList.Size = new System.Drawing.Size(366, 420);
-			this.processList.TabIndex = 0;
-			this.processList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.processList_MouseDown);
+			this.ProcessListBox.ContextMenuStrip = this.processContextMenu;
+			this.ProcessListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.ProcessListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.ProcessListBox.FormattingEnabled = true;
+			this.ProcessListBox.ItemHeight = 16;
+			this.ProcessListBox.Location = new System.Drawing.Point(10, 10);
+			this.ProcessListBox.Name = "ProcessListBox";
+			this.ProcessListBox.Size = new System.Drawing.Size(204, 405);
+			this.ProcessListBox.TabIndex = 0;
+			this.ProcessListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProcessList_MouseDown);
 			// 
 			// processContextMenu
 			// 
@@ -88,39 +90,28 @@ namespace TaskManager
 			this.göreviSonlandırToolStripMenuItem.Text = "Görevi Sonlandır";
 			this.göreviSonlandırToolStripMenuItem.Click += new System.EventHandler(this.KillProcess);
 			// 
-			// processUsageLabel
-			// 
-			this.processUsageLabel.AutoSize = true;
-			this.processUsageLabel.Location = new System.Drawing.Point(384, 12);
-			this.processUsageLabel.Name = "processUsageLabel";
-			this.processUsageLabel.Size = new System.Drawing.Size(35, 13);
-			this.processUsageLabel.TabIndex = 1;
-			this.processUsageLabel.Text = "label1";
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 451);
-			this.Controls.Add(this.processUsageLabel);
-			this.Controls.Add(this.processList);
+			this.ClientSize = new System.Drawing.Size(224, 425);
+			this.Controls.Add(this.ProcessListBox);
 			this.Name = "Form1";
+			this.Padding = new System.Windows.Forms.Padding(10);
 			this.Text = "Form1";
 			this.processContextMenu.ResumeLayout(false);
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.ListBox processList;
+		private System.Windows.Forms.ListBox ProcessListBox;
 		private System.Windows.Forms.ContextMenuStrip processContextMenu;
 		private System.Windows.Forms.ToolStripMenuItem test0ToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem test1ToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem işlemciKullanımıToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem göreviSonlandırToolStripMenuItem;
-		private System.Windows.Forms.Label processUsageLabel;
 	}
 }
 
